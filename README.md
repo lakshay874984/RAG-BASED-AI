@@ -31,7 +31,9 @@ Optional model options
 ```python
 #create it by visiting the google - ai website
 https://aistudio.google.com/app/apikey
+# store this in file gemini_api_key.py
 gemini_api_key = "YOUR_KEY_HERE"
+# install the google-genai
 pip install google-genai
 ```
 
