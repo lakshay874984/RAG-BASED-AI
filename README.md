@@ -29,6 +29,8 @@ Optional model options
 - If you use Gemini with `google.genai`, keep your Gemini API key in `gemini_api_key.py`:
 
 ```python
+#create it by visiting the google - ai website
+https://aistudio.google.com/api-keys?project=gen-lang-client-0042331425
 gemini_api_key = "YOUR_KEY_HERE"
 pip install google-genai
 ```
