@@ -30,7 +30,7 @@ Optional model options
 
 ```python
 #create it by visiting the google - ai website
-https://aistudio.google.com/api-keys?project=gen-lang-client-0042331425
+https://aistudio.google.com/app/apikey
 gemini_api_key = "YOUR_KEY_HERE"
 pip install google-genai
 ```
