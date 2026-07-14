@@ -1,8 +1,8 @@
-The `<pre>` tag is taught in **Video #13**, titled "**Entities, Code tag and more on HTML**."
+Forms and input tags are extensively covered in **Video #7**, titled **"Forms and input tags in HTML."**
 
-In this video, there are a few key moments where the tag is discussed:
-*   **02:31 – 02:35:** The instructor introduces the `<pre>` tag and explains its purpose.
-*   **03:05 – 03:09:** There is a further explanation of how the tag behaves within HTML.
-*   **06:23:** The video briefly touches on using the `<pre>` tag in conjunction with the `<code>` tag.
+In this video, you will find information at the following timestamps:
+*   **0:00 - 0:05:** A brief introduction to what forms and input tags are.
+*   **0:30 - 0:36:** An overview of the practical side, where you'll see the computer screen, various input tags, and best practices.
+*   **3:24 onwards (203.84 seconds):** This is where the deep dive happens. You will learn about form actions, how to use specific input types (like name, date, phone number, and age), and how to use the **label tag** to define those inputs.
 
-I recommend heading over to **Video #13** to get a clear understanding of how to use it!
+I recommend heading straight to **Video #7** to get a complete hands-on understanding of how to build forms in your web projects!

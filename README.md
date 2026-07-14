@@ -107,6 +107,18 @@ return r.json()["response"]
 - Use Gemini when you want Google Gemini's cloud model.
 - Use Ollama when you want a local model hosted via Ollama.
 
+Performance improvements
+
+- Use a stronger model when you need better answers.
+  - For Ollama, choose a larger model such as `llama3.2` or a higher-capacity local model if available.
+  - For Gemini, choose a higher Gemini model such as `gemini-2.5-flash-lite`, `gemini-3-flash-preview`, or a newer premium Gemini model.
+  - For OpenAI or Anthropic, use a higher-quality model if you connect those APIs instead of Gemini.
+
+- Adjust chunk size to improve recall and speed.
+  - Larger chunks mean fewer embeddings and faster similarity search, but may reduce precision.
+  - Smaller chunks mean more precise matching, but more embeddings and slower search.
+  - Find a balance for your data: try moderate chunk sizes first, then increase or decrease depending on answer quality and speed.
+
 Common issues and quick fixes
 
 - Connection refused: check the embedding service URL and that the service is running.
