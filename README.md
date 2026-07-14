@@ -115,8 +115,8 @@ return r.json()["response"]
 Performance improvements
 
 - Use a stronger model when you need better answers.
-  - For Ollama, choose a larger model such as `llama3.2` or a higher-capacity local model if available.
-  - For Gemini, choose a higher Gemini model such as `gemini-2.5-flash-lite`, `gemini-3-flash-preview`, or a newer premium Gemini model.
+  - For Ollama, choose a larger model such as `deepseek-v4-flash` or a higher-capacity local model if available or according to your pc       specifications.
+  - For Gemini, choose a higher Gemini model such as `gemini-3.5-flash`, `gemini-3.1-pro-preview`, or a newer premium Gemini model.
   - For OpenAI or Anthropic, use a higher-quality model if you connect those APIs instead of Gemini.
 
 - Adjust chunk size to improve recall and speed.
