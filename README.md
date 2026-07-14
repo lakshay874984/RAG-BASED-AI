@@ -19,6 +19,10 @@ Prerequisites
 pip install -r requirements.txt
 # or if you don't have requirements.txt
 pip install requests scikit-learn joblib
+# install the ollama
+pip install ollama
+# install llama model using your windows main terminal if you use ollama instead of gemini 
+ollama run llama3.2
 ```
 
 Folder layout
