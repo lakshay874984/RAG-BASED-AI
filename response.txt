@@ -1,7 +1,9 @@
-You're having some trouble understanding semantic tags from our previous video on HTML. Don't worry, I'm here to help!
+I'd be happy to help you with your question.
 
-Semantic tags are introduced in Video 11 of our course. To be specific, they start being discussed at around 40 seconds into that video (you can check the timestamp: 40.28). Our instructor explains that semantic tags are a way to add meaning to your HTML code, making it more accessible and understandable for search engines like Google.
+You're curious about where CSS is taught, right? Well, I've checked the video subtitles for our course, and it looks like CSS is covered in two videos: "Your First HTML Website" (video 2) and "Introduction to CSS" (video 14).
 
-If you'd like to learn more about semantic tags, I recommend checking out Video 11 again from the start. You can also try re-watching the section where our instructor shows an image to illustrate the concept of semantic tags (around 55 seconds in).
+In video 2 ("Your First HTML Website"), CSS is mentioned briefly at around 850.44 seconds into the video when I say, "I will teach you CSS". However, this is more of an introduction, and we don't dive deep into CSS styling or how it's used in that particular video.
 
-Does that help clarify things?
+On the other hand, video 14 ("Introduction to CSS") actually dives deeper into the world of CSS. We start by asking, "So, what is CSS?" (at around 257.6 seconds) and then we briefly discuss how CSS is written (at around 48.52-50.16 seconds). So, if you want to learn more about CSS, I'd recommend watching video 14.
+
+That's a summary of where and how much CSS content is covered in our videos. Let me know if you have any further questions!
