@@ -16,6 +16,10 @@ def create_embedding(text):
     print("h",r.json())
     embedding = r.json()['embeddings']
     return embedding
+
+
+
+
 jsons = os.listdir("jsons") # os.listdir() returns a list of all the files and directories in the specified directory. In this case, it returns a list of all the files in the "jsons" directory. The list will contain the names of the files as strings, without the full path. For example, if the "jsons" directory contains two files named "file1.json" and "file2.json", then jsons will be equal to ["file1.json", "file2.json"].
 my_dict = []
 chunk_id = 1

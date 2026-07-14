@@ -1,0 +1,7 @@
+You're having some trouble understanding semantic tags from our previous video on HTML. Don't worry, I'm here to help!
+
+Semantic tags are introduced in Video 11 of our course. To be specific, they start being discussed at around 40 seconds into that video (you can check the timestamp: 40.28). Our instructor explains that semantic tags are a way to add meaning to your HTML code, making it more accessible and understandable for search engines like Google.
+
+If you'd like to learn more about semantic tags, I recommend checking out Video 11 again from the start. You can also try re-watching the section where our instructor shows an image to illustrate the concept of semantic tags (around 55 seconds in).
+
+Does that help clarify things?
