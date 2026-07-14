@@ -36,17 +36,32 @@ Folder layout
 }
 ```
 
+
 Step-by-step: how to run (beginner-friendly)
 
-1. Start your embedding service (make sure it is reachable at the address above).
-2. Put one or more JSON chunk files into the `jsons/` folder using the format above.
-3. Generate embeddings for all chunks:
+1. If you have videos, convert them to MP3 first (use `mp4_to_mp3.py`):
+
+```bash
+# example: convert a single video
+python mp4_to_mp3.py input_video.mp4 output_audio.mp3
+```
+
+2. Convert MP3(s) to JSON chunks (use `mp3_to_json.py`):
+
+```bash
+# example: convert one mp3 to a chunked JSON file
+python mp3_to_json.py input_audio.mp3 jsons/output_audio.json
+```
+
+3. Start your embedding service (make sure it is reachable at the address above).
+
+4. Generate embeddings for all chunk JSON files:
 
 ```bash
 python read_chunks.py
 ```
 
-4. Run the query handler to ask questions using the indexed chunks:
+5. Run the query handler to ask questions using the indexed chunks:
 
 ```bash
 python process_incoming_query.py
