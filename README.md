@@ -30,6 +30,7 @@ Optional model options
 
 ```python
 gemini_api_key = "YOUR_KEY_HERE"
+pip install google-genai
 ```
 
 - If you use an Ollama model instead, install Ollama separately and pick a model such as `llama3.2`.
