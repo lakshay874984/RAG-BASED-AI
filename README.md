@@ -13,12 +13,27 @@ Prerequisites
 - An embedding service running at `http://localhost:11434/api/embed`
   - It should accept JSON like `{ "model": "bge-m3", "input": <string_or_list> }` and return `{ "embeddings": ... }`.
 - Install required Python packages:
-- Download and install ollama from ollama website
 
 ```bash
 pip install -r requirements.txt
 # or if you don't have requirements.txt
 pip install requests scikit-learn joblib
+```
+
+Optional model options
+
+- If you use Gemini with `google.genai`, keep your Gemini API key in `gemini_api_key.py`:
+
+```python
+gemini_api_key = "YOUR_KEY_HERE"
+```
+
+- If you use an Ollama model instead, install Ollama separately and pick a model such as `llama3.2`.
+
+```bash
+# install Ollama separately using its official installer
+# then install any local model you want to use
+ollama pull llama3.2
 ```
 
 Folder layout
@@ -66,6 +81,27 @@ python read_chunks.py
 ```bash
 python process_incoming_query.py
 ```
+
+Using Gemini vs Ollama
+
+- Gemini: the current `process_incoming_query.py` uses `google.genai` and `gemini_api_key.py` to call `gemini-3-flash-preview`.
+  - Make sure `gemini_api_key.py` contains a valid quoted API key.
+  - This is the default if you want cloud Gemini answers.
+
+- Ollama: if you prefer a local model, uncomment or replace the commented `inference()` section in `process_incoming_query.py` and call it instead of `gemini(prompt)`.
+  - Example local generation flow:
+
+```python
+r = requests.post("http://localhost:11434/api/generate", json={
+    "model": "llama3.2",
+    "prompt": prompt,
+    "stream": False
+})
+return r.json()["response"]
+```
+
+- Use Gemini when you want Google Gemini's cloud model.
+- Use Ollama when you want a local model hosted via Ollama.
 
 Common issues and quick fixes
 

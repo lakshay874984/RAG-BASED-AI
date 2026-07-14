@@ -3,6 +3,11 @@ import pandas as pd
 from sklearn.metrics.pairwise import cosine_similarity
 import joblib
 import requests
+from google import genai
+from gemini_api_key import gemini_api_key
+
+client = genai.Client(api_key=gemini_api_key)
+
 
 def create_embedding(text):
     r = requests.post("http://localhost:11434/api/embed",json={
@@ -14,13 +19,27 @@ def create_embedding(text):
     embedding = r.json()['embeddings']
     return embedding
 
-def inference(prompt):
-    r = requests.post("http://localhost:11434/api/generate",json={
-        "model":"llama3.2",
-        "prompt":prompt,
-        "stream":False
-    })
-    return r.json()['response']
+
+
+# def inference(prompt):
+#     r = requests.post("http://localhost:11434/api/generate",json={
+#         "model":"llama3.2",
+#         "prompt":prompt,
+#         "stream":False
+#     })
+#     return r.json()['response']
+
+
+
+def gemini(prompt):
+    interaction = client.interactions.create(
+    model="gemini-3-flash-preview",
+    input=prompt
+            )
+    return interaction.output_text
+
+
+
     
 
 df = joblib.load("embeddings.joblib") # joblib.load() deserializes the DataFrame from the file "embeddings.joblib" and loads it into memory. This allows us to access the DataFrame without having to recreate it from scratch. The resulting DataFrame df will contain the same data as when it was saved, including the 'text', 'chunk_id', and 'embedding' columns for each chunk.
@@ -61,7 +80,7 @@ for index,item in new_df.iterrows():
 
 # print("t",create_embedding(["cat sat on the mat","hey cat my name is lakshay"]))
 
-response = inference(prompt)
+response = gemini(prompt)
 print("response",response)
 
 with open("response.txt", "w") as f:

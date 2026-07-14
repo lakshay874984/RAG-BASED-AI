@@ -1,13 +1,8 @@
-For your question about "where is HTML concluded in this course", I'd be happy to help!
+The `<pre>` tag is taught in **Video #13**, titled "**Entities, Code tag and more on HTML**."
 
-From my knowledge of your Sigma web development course, it seems like HTML (Hypertext Markup Language) is covered in video number 13. However, there's a bit of confusion here.
+In this video, there are a few key moments where the tag is discussed:
+*   **02:31 – 02:35:** The instructor introduces the `<pre>` tag and explains its purpose.
+*   **03:05 – 03:09:** There is a further explanation of how the tag behaves within HTML.
+*   **06:23:** The video briefly touches on using the `<pre>` tag in conjunction with the `<code>` tag.
 
-According to the transcript, HTML is first mentioned at timestamp 2:26, and it continues until approximately 5 minutes later (timestamp around 5:24). This suggests that the initial introduction to HTML takes place in this range.
-
-Later on, video number 13 starts again from timestamp 0:52.16, where it seems like a wrap-up or conclusion of something related to HTML (although I'm not entirely sure what "Entities, Code tag and more on HTML" means without further context).
-
-However, the question remains as to when exactly HTML is concluded in this course. Since there isn't any direct mention of its conclusion in video number 13 starting from timestamp 0:52.16, it's hard to pinpoint an exact end time.
-
-To provide a better answer, I would suggest checking the timestamps of subsequent videos or looking at the overall structure of your Sigma web development course for more clarity on when HTML is fully covered and concluded.
-
-Please feel free to ask another question if you need further assistance!
+I recommend heading over to **Video #13** to get a clear understanding of how to use it!
