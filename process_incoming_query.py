@@ -14,7 +14,7 @@ def create_embedding(text):
     embedding = r.json()['embeddings']
     return embedding
 
-df = joblib.load("df.pkl") # joblib.load() deserializes the DataFrame from the file "df.pkl" and loads it into memory. This allows us to access the DataFrame without having to recreate it from scratch. The resulting DataFrame df will contain the same data as when it was saved, including the 'text', 'chunk_id', and 'embedding' columns for each chunk.
+df = joblib.load("embeddings.joblib") # joblib.load() deserializes the DataFrame from the file "embeddings.joblib" and loads it into memory. This allows us to access the DataFrame without having to recreate it from scratch. The resulting DataFrame df will contain the same data as when it was saved, including the 'text', 'chunk_id', and 'embedding' columns for each chunk.
 
 
 
@@ -27,13 +27,17 @@ similarities = cosine_similarity(np.vstack(df['embedding']), np.array([question_
 
 print("similarities",similarities)
 
-Top_index = 3
+Top_index = 30
 max_ind = np.argsort(similarities)[-Top_index:][::-1]
 
 print("max_ind",max_ind)
 
 new_df = df.loc[max_ind]
 
-print("new_df",new_df)
+print("new_df",new_df[['title','text','number']])
+
+for index,item in new_df.iterrows():
+    print("item",item['text'],item['title'],item['number'],item['start'],item['end'])
+
 # print("t",create_embedding(["cat sat on the mat","hey cat my name is lakshay"]))
 

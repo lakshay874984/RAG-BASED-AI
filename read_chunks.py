@@ -13,7 +13,7 @@ def create_embedding(text):
         "input":text
     })  # r will be a response object that contains the response from the server. The response object has a method called json() that returns the JSON data from the response as a Python dictionary. In this case, the JSON data contains a key called 'embeddings' that contains the embeddings for the input text. We can access this key using r.json()['embeddings'] to get the embeddings as a list of lists.
     # print("hey",r)
-    # print("h",r.json())
+    print("h",r.json())
     embedding = r.json()['embeddings']
     return embedding
 jsons = os.listdir("jsons") # os.listdir() returns a list of all the files and directories in the specified directory. In this case, it returns a list of all the files in the "jsons" directory. The list will contain the names of the files as strings, without the full path. For example, if the "jsons" directory contains two files named "file1.json" and "file2.json", then jsons will be equal to ["file1.json", "file2.json"].
@@ -35,7 +35,7 @@ for json1 in jsons:
 # print(my_dict)
 df = pd.DataFrame.from_records(my_dict) # from_records() creates a DataFrame from a list of dictionaries. Each dictionary in the list represents a row in the DataFrame, and the keys of the dictionaries represent the column names. In this case, my_dict is a list of dictionaries where each dictionary contains information about a chunk, including its 'text', 'chunk_id', and 'embedding'. The resulting DataFrame df will have columns corresponding to these keys and rows corresponding to each chunk.
 print(df)
-joblib.dump(df,"df.pkl") # joblib.dump() serializes the DataFrame df and saves it to a file named "df.pkl". This allows us to save the DataFrame to disk so that we can load it later without having to recreate it from scratch. The resulting file "df.pkl" will contain the serialized representation of the DataFrame, which can be loaded back into memory using joblib.load().
+joblib.dump(df,"embeddings.joblib") # joblib.dump() serializes the DataFrame df and saves it to a file named "embeddings.joblib". This allows us to save the DataFrame to disk so that we can load it later without having to recreate it from scratch. The resulting file "embeddings.joblib" will contain the serialized representation of the DataFrame, which can be loaded back into memory using joblib.load().
 
 
 
