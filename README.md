@@ -63,4 +63,11 @@ Simple tips
 - Keep `print` debug lines while developing, then remove them later to reduce noise.
 - To use another embedding model, change the `"model"` field in `read_chunks.py`.
 
+Files (what each script does)
+
+- `mp3_to_json.py`: Converts an MP3 audio file into a JSON file of transcribed chunks. It typically calls a speech-to-text tool (e.g., Whisper) to transcribe audio, splits the transcription into smaller chunk objects, and writes them into the `jsons/` folder so they can be embedded.
+- `mp4_to_mp3.py`: Extracts the audio track from an MP4 video and saves it as an MP3 file. Use this when your source material is video and you want to transcribe the audio.
+- `read_chunks.py`: Reads all JSON chunk files from the `jsons/` folder, collects the `text` fields from each chunk, and calls the local embedding API to create embeddings for those chunks. The script prints or stores embeddings for later retrieval.
+- `process_incoming_query.py`: The query entrypoint. Accepts a user query, compares it against the stored embeddings to find relevant chunks, and composes an answer using the matched content (and optionally a local LLM).
+
 
