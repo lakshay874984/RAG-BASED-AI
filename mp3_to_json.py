@@ -19,6 +19,7 @@ for audio in audios:
                               # syntax of model.transcribe() is model.transcribe(audio, language, task, word_timestamps). The audio parameter specifies the path to the audio file to be transcribed. The language parameter specifies the language of the audio. The task parameter specifies the task to be performed, which can be "transcribe" or "translate". The word_timestamps parameter specifies whether to include word-level timestamps in the output. In this case, we are transcribing the audio file located at "audios/{audio}" in Hindi language, translating it to English, and not including word-level timestamps in the output.and will give a output for example if the audio file is "01 - Introduction.mp3", then the output will be a dictionary with keys "text" and "segments". The "text" key will contain the transcribed text of the audio, and the "segments" key will contain a list of segments, where each segment is a dictionary with keys "start", "end", and "text" representing the start time, end time, and transcribed text of that segment, respectively.
         
         chunks = []
+        # result output will be like {"text": "transcribed text", "segments": [{"start": 0.0, "end": 5.0, "text": "segment text"}, ...]}
         for segment in result["segments"]:
             chunks.append({"number": number, "title":title, "start": segment["start"], "end": segment["end"], "text": segment["text"]})
         
