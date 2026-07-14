@@ -63,4 +63,4 @@ Simple tips
 - Keep `print` debug lines while developing, then remove them later to reduce noise.
 - To use another embedding model, change the `"model"` field in `read_chunks.py`.
 
-If you want this even shorter or want examples of chunking code, tell me which part to expand.
+
